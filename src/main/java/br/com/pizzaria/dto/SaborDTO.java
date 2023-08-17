@@ -9,6 +9,6 @@ import org.springframework.stereotype.Service;
 @Service
 @NoArgsConstructor
 @AllArgsConstructor
-    public class FuncionarioDTO {
-        private String nome;
-    }
+public class SaborDTO {
+    private String nome;
+}

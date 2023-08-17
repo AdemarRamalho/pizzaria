@@ -1,2 +1,4 @@
-package br.com.pizzaria.entity.enums;public enum Tamanho {
+package br.com.pizzaria.entity.enums;
+
+public enum Tamanho {
 }
