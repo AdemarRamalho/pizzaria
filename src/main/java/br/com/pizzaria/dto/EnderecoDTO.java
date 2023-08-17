@@ -1,4 +1,2 @@
-package br.com.pizzaria.dto;
-
-public class EndrecoDTO {
+package br.com.pizzaria.dto;public class EnderecoDTO {
 }
