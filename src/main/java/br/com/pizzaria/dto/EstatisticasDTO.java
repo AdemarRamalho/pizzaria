@@ -1,4 +1,13 @@
 package br.com.pizzaria.dto;
+
+import jakarta.persistence.Entity;
+import lombok.*;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+
     public class EstatisticasDTO {
         private int totalPedidos;
         private int pedidosPagos;

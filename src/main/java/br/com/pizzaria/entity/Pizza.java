@@ -4,17 +4,16 @@ import br.com.pizzaria.entity.enums.Ingrediente;
 import br.com.pizzaria.entity.enums.Sabor;
 import br.com.pizzaria.entity.enums.Tamanho;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 @Getter
-@Service
-@NoArgsConstructor
+@Setter
 @AllArgsConstructor
+@NoArgsConstructor
+@Data
 @Entity
 public class Pizza {
     @Id

@@ -15,9 +15,9 @@ public class PedidoDTO {
     private String tamanho;
     private List<String> sabores;
     private boolean entregaNecessaria;
-
     private Long clienteId;
     private Long funcionarioId;
     private String status;
+    private double valorTotal;
 }
 

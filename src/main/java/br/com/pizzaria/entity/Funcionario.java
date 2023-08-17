@@ -1,10 +1,16 @@
 package br.com.pizzaria.entity;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 @Entity
 public class Funcionario {
     @Id

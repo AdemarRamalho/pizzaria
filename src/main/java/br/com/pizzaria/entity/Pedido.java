@@ -3,16 +3,15 @@ package br.com.pizzaria.entity;
 import br.com.pizzaria.entity.enums.Status;
 import br.com.pizzaria.entity.enums.Tamanho;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Getter
-@Service
-@NoArgsConstructor
+@Setter
 @AllArgsConstructor
+@NoArgsConstructor
+@Data
 @Entity
 public class Pedido {
     @Id
