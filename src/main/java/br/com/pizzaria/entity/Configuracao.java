@@ -10,20 +10,24 @@ import lombok.Setter;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.util.List;
 
-@Entity
 @Table(name = "Tb_confg", schema = "public")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
+@Entity
 public class Configuracao {
     @Column(name = "Valor_Pizza")
     private BigDecimal ValorPizza;
 
-
-
-
-
+    private List<Sabor> sabores;
 
 }
+
+
+
+
+
+
