@@ -16,5 +16,5 @@ public class ClienteDTO {
     private String nome;
     private String telefone;
 
-    private EnderecoDTO enderecoDTO;
+    private EnderecoDTO.EnderecoDTO enderecoDTO;
 }
