@@ -24,8 +24,10 @@ public class ConfiguracaoController {
     @PostMapping
     public ResponseEntity<?>cad(@ResponseBody final Configuracao configuracao){
         try {
-            return ResponseEntity.ok(configuracaoService.cdastrar(configuracao));
+            return ResponseEntity.ok(configuracaoService.cadastrar(configuracao));
 
+        }catch (Exception e){
+            return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
 
