@@ -30,5 +30,14 @@ public class ConfiguracaoController {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
+    @PutMapping("/{idConf}")
+    public ResponseEntity<?>atu(@PathVariable Long idConf,@RequestBody Configuracao configuracao){
+        try {
+            this.configuracaoService.atualizar(idConf, configuracao);
+            return ResponseEntity.ok().body("Conf atualizada com sucesso");
+        }catch (Exception e){
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
 
 }
