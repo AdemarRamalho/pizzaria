@@ -1,4 +1,4 @@
-package br.com.pizzaria.entity.enums;
+package br.com.pizzaria.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
