@@ -1,8 +1,6 @@
 package br.com.pizzaria.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,6 +17,10 @@ import java.util.List;
 @Setter
 @Entity
 public class Configuracao {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id", nullable = false,unique = true)
+    private Long id;
     @Column(name = "Valor_Pizza")
     private BigDecimal ValorPizza;
 
