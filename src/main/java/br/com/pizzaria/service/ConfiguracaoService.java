@@ -29,7 +29,14 @@ public class ConfiguracaoService {
         
     }
 
-
+    @Transactional
+    public void cadastrar(Configuracao configuracao){
+        this.configuracaoRepository.save(configuracao);
+    }
+    @Transactional
+    public void atualizar(Configuracao configuracao){
+        this.configuracaoRepository.save(configuracao);
+    }
 
     }
 
