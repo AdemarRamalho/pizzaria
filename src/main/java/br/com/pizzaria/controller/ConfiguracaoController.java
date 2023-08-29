@@ -32,7 +32,7 @@ public class ConfiguracaoController {
     }
     @PutMapping("/{idConf}")
     public ResponseEntity<?>atu(@PathVariable Long idConf,@RequestBody Configuracao configuracao){
-        try {
+        try {4
             this.configuracaoService.atualizar(idConf, configuracao);
             return ResponseEntity.ok().body("Conf atualizada com sucesso");
         }catch (Exception e){
