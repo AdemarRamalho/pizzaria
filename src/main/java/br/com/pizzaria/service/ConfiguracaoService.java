@@ -1,12 +1,8 @@
 package br.com.pizzaria.service;
 
-import br.com.pizzaria.dto.SaborDTO;
 import br.com.pizzaria.entity.Configuracao;
-import br.com.pizzaria.entity.Sabor;
 import br.com.pizzaria.repository.ConfiguracaoRepository;
-import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
-import org.hibernate.mapping.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -34,7 +30,7 @@ public class ConfiguracaoService {
         this.configuracaoRepository.save(configuracao);
     }
     @Transactional
-    public void atualizar(Configuracao configuracao){
+    public void atualizar(Long idConf, Configuracao configuracao){
         this.configuracaoRepository.save(configuracao);
     }
 

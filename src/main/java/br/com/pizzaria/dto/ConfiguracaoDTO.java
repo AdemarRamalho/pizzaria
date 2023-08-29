@@ -10,6 +10,7 @@ import lombok.Setter;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 
 @Table(name = "Tb_confg", schema = "public")
@@ -22,7 +23,7 @@ public class ConfiguracaoDTO {
     @Column(name = "Valor_Pizza")
     private BigDecimal ValorPizza;
 
-    private Sabor sabores;
+    private List<Sabor> sabores = new ArrayList<>();
 
 
 

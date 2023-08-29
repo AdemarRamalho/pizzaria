@@ -22,9 +22,9 @@ public class ConfiguracaoController {
     }
 
     @PostMapping
-    public ResponseEntity<?>cad(@ResponseBody final Configuracao configuracao){
+    public ResponseEntity<?>cad(Configuracao configuracao){
         try {
-            return ResponseEntity.ok(configuracaoService.cadastrar(configuracao));
+            return ResponseEntity.ok(configuracaoService.cadastrar(configuracao);
 
         }catch (Exception e){
             return ResponseEntity.badRequest().body(e.getMessage());
@@ -32,8 +32,8 @@ public class ConfiguracaoController {
     }
     @PutMapping("/{idConf}")
     public ResponseEntity<?>atu(@PathVariable Long idConf,@RequestBody Configuracao configuracao){
-        try {4
-            this.configuracaoService.atualizar(idConf, configuracao);
+        try {
+            this.configuracaoService.atualizar(idConf,configuracao);
             return ResponseEntity.ok().body("Conf atualizada com sucesso");
         }catch (Exception e){
             return ResponseEntity.badRequest().body(e.getMessage());
