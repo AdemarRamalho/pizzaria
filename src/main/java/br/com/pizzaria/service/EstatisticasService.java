@@ -57,7 +57,7 @@ public class EstatisticasService {
 
         return mapEstatisticasToDTO(estatisticas);
     }
-    public Estatisticas calcularEstatisticasDoMes() {
+    public EstatisticasDTO calcularEstatisticasDoMes() {
         LocalDate hoje = LocalDate.now();
         YearMonth mesAtual = YearMonth.from(hoje);
         LocalDate primeiroDiaDoMes = mesAtual.atDay(1);
@@ -65,17 +65,18 @@ public class EstatisticasService {
 
         List<Pedido> pedidosDoMes = pedidoRepository.findByDataPedidoBetween(primeiroDiaDoMes, ultimoDiaDoMes);
 
-        return calcularEstatisticas(pedidosDoMes);
+        Estatisticas estatisticas = calcularEstatisticas(pedidosDoMes);
+        return mapEstatisticasToDTO(estatisticas);
     }
-    public Estatisticas calcularEstatisticasDoAno() {
+    public EstatisticasDTO calcularEstatisticasDoAno() {
         LocalDate hoje = LocalDate.now();
         int anoAtual = hoje.getYear();
         LocalDate primeiroDiaDoAno = LocalDate.of(anoAtual, Month.JANUARY, 1);
         LocalDate ultimoDiaDoAno = LocalDate.of(anoAtual, Month.DECEMBER, 31);
 
         List<Pedido> pedidosDoAno = pedidoRepository.findByDataPedidoBetween(primeiroDiaDoAno, ultimoDiaDoAno);
-
-        return calcularEstatisticas(pedidosDoAno);
+        Estatisticas estatisticas = calcularEstatisticas(pedidosDoAno);
+        return mapEstatisticasToDTO(estatisticas);
     }
     private EstatisticasDTO mapEstatisticasToDTO(Estatisticas estatisticas) {
         EstatisticasDTO dto = new EstatisticasDTO();

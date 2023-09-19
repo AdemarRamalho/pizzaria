@@ -20,18 +20,18 @@ public class ConfiguracaoController {
                 ? ResponseEntity.badRequest().body("Nada encontradp")
                 : ResponseEntity.ok(configuracao);
     }
+    /*
+        @PostMapping
+        public ResponseEntity<?>cadastrarConfiguracao(Configuracao configuracao){
+            try {
+                return ResponseEntity(configuracaoService.cadastrar(configuracao));
 
-    @PostMapping
-    public ResponseEntity<?>cad(Configuracao configuracao){
-        try {
-            return ResponseEntity.ok(configuracaoService.cadastrar(configuracao);
-
-        }catch (Exception e){
-            return ResponseEntity.badRequest().body(e.getMessage());
-        }
-    }
+            }catch (Exception e){
+                return ResponseEntity.noContent().build();
+            }
+        }*/
     @PutMapping("/{idConf}")
-    public ResponseEntity<?>atu(@PathVariable Long idConf,@RequestBody Configuracao configuracao){
+    public ResponseEntity<?>atualizarConfiguracao(@PathVariable Long idConf,@RequestBody Configuracao configuracao){
         try {
             this.configuracaoService.atualizar(idConf,configuracao);
             return ResponseEntity.ok().body("Conf atualizada com sucesso");

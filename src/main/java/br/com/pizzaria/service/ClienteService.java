@@ -15,11 +15,6 @@ public class ClienteService {
     private final ClienteRepository clienteRepository;
     private final ModelMapper modelMapper;
 
-    @Autowired
-    public ClienteService(ClienteRepository clienteRepository, ModelMapper modelMapper) {
-        this.clienteRepository = clienteRepository;
-        this.modelMapper = modelMapper;
-    }
 
     public Cliente criarCliente(ClienteDTO clienteDTO) {
         Cliente cliente = modelMapper.map(clienteDTO, Cliente.class);
@@ -50,6 +45,10 @@ public class ClienteService {
 
         clienteRepository.delete(cliente);
     }
-
+    @Autowired
+    public ClienteService(ClienteRepository clienteRepository, ModelMapper modelMapper) {
+        this.clienteRepository = clienteRepository;
+        this.modelMapper = modelMapper;
+    }
 
 }

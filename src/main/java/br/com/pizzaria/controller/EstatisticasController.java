@@ -29,15 +29,15 @@ import org.springframework.web.bind.annotation.RestController;
         }
 
         @GetMapping("/mensais")
-        public ResponseEntity<Estatisticas> obterEstatisticasMensais() {
-            Estatisticas estatisticas = estatisticasService.calcularEstatisticasDoMes();
-            return ResponseEntity.ok(estatisticas);
+        public ResponseEntity<EstatisticasDTO> obterEstatisticasMensais() {
+            EstatisticasDTO estatisticasDTO = estatisticasService.calcularEstatisticasDoMes();
+            return ResponseEntity.ok(estatisticasDTO);
         }
 
         @GetMapping("/anuais")
-        public ResponseEntity<Estatisticas> obterEstatisticasAnuais() {
-            Estatisticas estatisticas = estatisticasService.calcularEstatisticasDoAno();
-            return ResponseEntity.ok(estatisticas);
+        public ResponseEntity<EstatisticasDTO> obterEstatisticasAnuais() {
+            EstatisticasDTO estatisticasDTO = estatisticasService.calcularEstatisticasDoAno();
+            return ResponseEntity.ok(estatisticasDTO);
         }
 
     @Configuration

@@ -14,8 +14,8 @@ public class Endereco {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String rua;
-    private int numero;
+    private String nomeRua;
+    private int numeroCasa;
 
     @OneToOne(mappedBy = "endereco")
     private Cliente cliente;
