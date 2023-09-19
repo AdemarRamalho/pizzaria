@@ -40,14 +40,5 @@ import org.springframework.web.bind.annotation.RestController;
             return ResponseEntity.ok(estatisticasDTO);
         }
 
-    @Configuration
-    public class ModelMapperConfig {
 
-        @Bean
-        public ModelMapper modelMapper() {
-            ModelMapper modelMapper = new ModelMapper();
-
-            return modelMapper;
-        }
-    }
 }

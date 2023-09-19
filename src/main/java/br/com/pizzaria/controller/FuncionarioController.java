@@ -63,15 +63,5 @@ public class FuncionarioController {
         funcionarioService.deletarFuncionario(id);
         return ResponseEntity.noContent().build();
     }
-    @Configuration
-    public class ModelMapperConfig {
-
-        @Bean
-        public ModelMapper modelMapper() {
-            ModelMapper modelMapper = new ModelMapper();
-
-            return modelMapper;
-        }
-    }
 
 }

@@ -47,15 +47,4 @@ public class EnderecoController {
         EnderecoDTO responseDTO = modelMapper.map(endereco, EnderecoDTO.class);
         return ResponseEntity.ok(responseDTO);
     }
-    @Configuration
-    public class ModelMapperConfig {
-
-        @Bean
-        public ModelMapper modelMapper() {
-            ModelMapper modelMapper = new ModelMapper();
-
-
-            return modelMapper;
-        }
-    }
 }

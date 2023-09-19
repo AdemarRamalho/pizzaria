@@ -5,8 +5,6 @@ import br.com.pizzaria.entity.Pedido;
 import br.com.pizzaria.service.PedidoService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -65,14 +63,4 @@ public class PedidoController {
     }
 
 
-    @Configuration
-    public class ModelMapperConfig {
-
-        @Bean
-        public ModelMapper modelMapper() {
-            ModelMapper modelMapper = new ModelMapper();
-
-            return modelMapper;
-        }
-    }
 }
