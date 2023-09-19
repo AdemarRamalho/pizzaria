@@ -139,6 +139,16 @@ public class FuncionariosServiceTest {
 
         verify(funcionarioRepository, times(1)).findById(id);
     }
+
+    @Test
+    public void testConstrutorFuncionarioService() {
+        assertNotNull(funcionarioService);
+        assertNotNull(funcionarioRepository);
+
+        when(funcionarioRepository.findAll()).thenReturn(new ArrayList<>());
+
+        assertNotNull(funcionarioService.getModelMapper());
+    }
 }
 
 

@@ -10,6 +10,8 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.modelmapper.ModelMapper;
+
 
 
 import java.util.ArrayList;
@@ -18,6 +20,7 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
+
 public class ClienteServiceTest {
 
     @InjectMocks
@@ -25,6 +28,8 @@ public class ClienteServiceTest {
 
     @Mock
     private ClienteRepository clienteRepository;
+    @Mock
+    private ModelMapper modelMapper;
 
     @BeforeEach
     public void setUp() {
@@ -32,6 +37,37 @@ public class ClienteServiceTest {
     }
 
 
+    @Test
+    public void testCriarCliente() {
+        // Configurar dados de entrada
+        ClienteDTO clienteDTO = new ClienteDTO();
+        clienteDTO.setNome("João");
+        clienteDTO.setTelefone("123456789");
+
+        // Criar um objeto Cliente simulado com os valores corretos
+        Cliente clienteSimulado = new Cliente();
+        clienteSimulado.setId(1L);
+        clienteSimulado.setNome("João");
+        clienteSimulado.setTelefone("123456789");
+
+
+        when(modelMapper.map(clienteDTO, Cliente.class)).thenReturn(clienteSimulado);
+
+
+        when(clienteRepository.save(clienteSimulado)).thenReturn(clienteSimulado);
+
+
+        Cliente clienteCriado = clienteService.criarCliente(clienteDTO);
+
+
+        assertNotNull(clienteCriado.getId());
+        assertEquals("João", clienteCriado.getNome());
+        assertEquals("123456789", clienteCriado.getTelefone());
+
+
+        verify(modelMapper, times(1)).map(clienteDTO, Cliente.class);
+        verify(clienteRepository, times(1)).save(clienteSimulado);
+    }
 
 
     @Test
@@ -108,6 +144,8 @@ public class ClienteServiceTest {
         assertThrows(EntityNotFoundException.class, () -> clienteService.deletarCliente(id));
 
     }
+
+
 }
 
 

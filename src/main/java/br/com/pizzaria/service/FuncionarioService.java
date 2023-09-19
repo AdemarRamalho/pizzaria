@@ -4,12 +4,13 @@ import br.com.pizzaria.dto.FuncionarioDTO;
 import br.com.pizzaria.entity.Funcionario;
 import br.com.pizzaria.repository.FuncionarioRepository;
 import jakarta.persistence.EntityNotFoundException;
+import lombok.Getter;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Getter
 @Service
 public class FuncionarioService {
     private final FuncionarioRepository funcionarioRepository;

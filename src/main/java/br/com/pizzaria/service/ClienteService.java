@@ -12,15 +12,19 @@ import java.util.List;
 
 @Service
 public class ClienteService {
-    private final ClienteRepository clienteRepository;
-    private final ModelMapper modelMapper;
+    @Autowired
+    private ClienteRepository clienteRepository;
+
+    @Autowired
+    private  ModelMapper modelMapper;
 
 
+    @Autowired
     public Cliente criarCliente(ClienteDTO clienteDTO) {
         Cliente cliente = modelMapper.map(clienteDTO, Cliente.class);
         return clienteRepository.save(cliente);
     }
-
+    @Autowired
     public List<Cliente> listarClientes() {
         return clienteRepository.findAll();
     }
@@ -29,7 +33,7 @@ public class ClienteService {
         return clienteRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Cliente não encontrado"));
     }
-
+    @Autowired
     public Cliente atualizarCliente(Long id, ClienteDTO clienteDTO) {
         Cliente cliente = clienteRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Cliente não encontrado"));
@@ -38,7 +42,7 @@ public class ClienteService {
 
         return clienteRepository.save(cliente);
     }
-
+    @Autowired
     public void deletarCliente(Long id) {
         Cliente cliente = clienteRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Cliente não encontrado"));
