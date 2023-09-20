@@ -5,8 +5,7 @@ import br.com.pizzaria.entity.Cliente;
 import br.com.pizzaria.service.ClienteService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -65,14 +64,4 @@ public class ClienteController {
         return ResponseEntity.noContent().build();
     }
 
-    @Configuration
-    public class ModelMapperConfig {
-
-        @Bean
-        public ModelMapper modelMapper() {
-            ModelMapper modelMapper = new ModelMapper();
-
-            return modelMapper;
-        }
-    }
 }

@@ -88,5 +88,31 @@ public class EnderecoServiceTest {
 
         verify(enderecoRepository, times(1)).findById(id);
     }
+    @Test
+    public void testAtualizarEndereco() {
+        Long id = 1L;
+        EnderecoDTO enderecoDTO = new EnderecoDTO();
+        enderecoDTO.setNomeRua("Rua Teste");
+        enderecoDTO.setNumeroCasa(255);
+
+
+        Endereco enderecoExistente = new Endereco();
+        enderecoExistente.setId(id);
+        enderecoExistente.setNomeRua("Rua Antiga");
+        enderecoExistente.setNumeroCasa(200);
+
+
+        when(enderecoRepository.findById(id)).thenReturn(Optional.of(enderecoExistente));
+        when(enderecoRepository.save(any(Endereco.class))).thenReturn(enderecoExistente);
+        when(modelMapper.map(enderecoDTO, Endereco.class)).thenReturn(enderecoExistente);
+
+        Endereco enderecoAtualizado = enderecoService.atualizarEndereco(id, enderecoDTO);
+
+        assertEquals("Rua Teste", enderecoAtualizado.getNomeRua());
+        assertEquals(255, enderecoAtualizado.getNumeroCasa());
+
+
+        verify(enderecoRepository, times(1)).save(enderecoExistente);
+    }
 }
 

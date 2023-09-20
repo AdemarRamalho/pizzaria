@@ -34,5 +34,16 @@ public class EnderecoService {
         return enderecoRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Endereço não encontrado"));
     }
+    public Endereco atualizarEndereco(Long id, EnderecoDTO enderecoDTO) {
+        Endereco enderecoExistente = enderecoRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Endereço não encontrado"));
+
+        enderecoExistente.setNomeRua(enderecoDTO.getNomeRua());
+        enderecoExistente.setNumeroCasa(enderecoDTO.getNumeroCasa());
+
+
+        return enderecoRepository.save(enderecoExistente);
+    }
+
 }
 

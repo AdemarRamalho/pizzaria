@@ -9,90 +9,90 @@ public class IngredienteTest {
 
     @Test
     public void testNomeIngredienteTomate() {
-        assertEquals("Tomate", Ingrediente.TOMATE.name());
+        assertEquals("TOMATE", Ingrediente.TOMATE.name());
     }
 
     @Test
     public void testNomeIngredienteQueijo() {
-        assertEquals("Queijo", Ingrediente.QUEIJO.name());
+        assertEquals("QUEIJO", Ingrediente.QUEIJO.name());
     }
 
     @Test
     public void testNomeIngredienteCebola() {
-        assertEquals("Cebola", Ingrediente.CEBOLA.name());
+        assertEquals("CEBOLA", Ingrediente.CEBOLA.name());
     }
     @Test
     public void testNomeIngredienteFrango() {
-        assertEquals("Frango", Ingrediente.FRANGO.name());
+        assertEquals("FRANGO", Ingrediente.FRANGO.name());
     }
     @Test
     public void testNomeIngredienteCalabresa() {
-        assertEquals("Calabresa", Ingrediente.CALABRESA.name());
+        assertEquals("CALABRESA", Ingrediente.CALABRESA.name());
     }
     @Test
     public void testNomeIngredientePimentao() {
-        assertEquals("Pimentao", Ingrediente.PIMENTAO.name());
+        assertEquals("PIMENTAO", Ingrediente.PIMENTAO.name());
     }
     @Test
     public void testNomeIngredienteOregano() {
-        assertEquals("Oregano", Ingrediente.OREGANO.name());
+        assertEquals("OREGANO", Ingrediente.OREGANO.name());
     }
     @Test
     public void testNomeIngredienteOvo() {
-        assertEquals("Ovo", Ingrediente.OVO.name());
+        assertEquals("OVO", Ingrediente.OVO.name());
     }
     @Test
     public void testNomeIngredienteCatupiry() {
-        assertEquals("Catupiry", Ingrediente.CATUPIRY.name());
+        assertEquals("CATUPIRY", Ingrediente.CATUPIRY.name());
     }
     @Test
     public void testNomeIngredienteAzeitona() {
-        assertEquals("Azeitona", Ingrediente.AZEITONA.name());
+        assertEquals("AZEITONA", Ingrediente.AZEITONA.name());
     }
 
 
     @Test
     public void testToStringIngredienteTomate() {
-        assertEquals("Tomate", Ingrediente.TOMATE.toString());
+        assertEquals("TOMATE", Ingrediente.TOMATE.toString());
     }
 
     @Test
     public void testToStringIngredienteQueijo() {
-        assertEquals("Queijo", Ingrediente.QUEIJO.toString());
+        assertEquals("QUEIJO", Ingrediente.QUEIJO.toString());
     }
 
     @Test
     public void testToStringIngredienteCebola() {
-        assertEquals("Cebola", Ingrediente.CEBOLA.toString());
+        assertEquals("CEBOLA", Ingrediente.CEBOLA.toString());
     }
 
     @Test
     public void testToStringIngredienteFrango() {
-        assertEquals("Frango", Ingrediente.FRANGO.toString());
+        assertEquals("FRANGO", Ingrediente.FRANGO.toString());
     }
     @Test
     public void testToStringIngredienteCalabresa() {
-        assertEquals("Calabresa", Ingrediente.CALABRESA.toString());
+        assertEquals("CALABRESA", Ingrediente.CALABRESA.toString());
     }
     @Test
     public void testToStringIngredientePimentao() {
-        assertEquals("Pimentao", Ingrediente.PIMENTAO.toString());
+        assertEquals("PIMENTAO", Ingrediente.PIMENTAO.toString());
     }
     @Test
     public void testToStringIngredienteOregano() {
-        assertEquals("Oregano", Ingrediente.OREGANO.toString());
+        assertEquals("OREGANO", Ingrediente.OREGANO.toString());
     }
     @Test
     public void testToStringIngredienteOvo() {
-        assertEquals("Ovo", Ingrediente.OVO.toString());
+        assertEquals("OVO", Ingrediente.OVO.toString());
     }
     @Test
     public void testToStringIngredienteCatupiry() {
-        assertEquals("Catupiry", Ingrediente.CATUPIRY.toString());
+        assertEquals("CATUPIRY", Ingrediente.CATUPIRY.toString());
     }
     @Test
     public void testToStringIngredienteAzeitona() {
-        assertEquals("Azeitona", Ingrediente.AZEITONA.toString());
+        assertEquals("AZEITONA", Ingrediente.AZEITONA.toString());
     }
 
 

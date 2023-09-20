@@ -46,4 +46,14 @@ public class EnderecoController {
         EnderecoDTO responseDTO = modelMapper.map(endereco, EnderecoDTO.class);
         return ResponseEntity.ok(responseDTO);
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<EnderecoDTO> atualizarEndereco(
+            @PathVariable Long id,
+            @RequestBody EnderecoDTO enderecoDTO
+    ) {
+        Endereco enderecoAtualizado = enderecoService.atualizarEndereco(id, enderecoDTO);
+        EnderecoDTO responseDTO = modelMapper.map(enderecoAtualizado, EnderecoDTO.class);
+        return ResponseEntity.ok(responseDTO);
+    }
 }
