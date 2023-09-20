@@ -1,4 +1,4 @@
-package br.com.pizzaria.ServiceTest;
+package br.com.pizzaria.serviceTest;
 
 import br.com.pizzaria.dto.ClienteDTO;
 import br.com.pizzaria.entity.Cliente;

@@ -1,6 +1,6 @@
 package br.com.pizzaria.dto;
 
-import jakarta.persistence.Entity;
+
 import lombok.*;
 
 @Getter

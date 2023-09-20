@@ -1,4 +1,4 @@
-package br.com.pizzaria.ServiceTest;
+package br.com.pizzaria.serviceTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;

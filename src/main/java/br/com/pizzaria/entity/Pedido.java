@@ -4,7 +4,7 @@ import br.com.pizzaria.entity.enums.Status;
 import br.com.pizzaria.entity.enums.Tamanho;
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.stereotype.Service;
+
 
 import java.util.List;
 @Getter

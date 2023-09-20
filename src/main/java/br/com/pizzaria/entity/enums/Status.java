@@ -8,5 +8,4 @@ public enum Status {
     EM_ANDAMENTO,
     EM_ENTREGA,
     FINALIZADO,
-
 }

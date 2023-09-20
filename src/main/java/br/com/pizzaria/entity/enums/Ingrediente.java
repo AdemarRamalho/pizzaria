@@ -1,6 +1,7 @@
 package br.com.pizzaria.entity.enums;
 
 public enum Ingrediente {
+
     TOMATE,
     QUEIJO,
     CEBOLA,
@@ -11,4 +12,5 @@ public enum Ingrediente {
     OVO,
     CATUPIRY,
     AZEITONA
+
 }
