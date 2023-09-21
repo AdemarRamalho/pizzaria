@@ -25,7 +25,7 @@ import java.util.List;
 import java.util.Optional;
 
 
-public class PedidoServiceTest {
+ public class PedidoServiceTest {
 
     @Mock
     private PedidoRepository pedidoRepository;
@@ -43,12 +43,12 @@ public class PedidoServiceTest {
     private PedidoService pedidoService;
 
     @BeforeEach
-    public void setUp() {
+     void setUp() {
         MockitoAnnotations.openMocks(this);
     }
 
     @Test
-    public void testCriarPedido() {
+     void testCriarPedido() {
         // Mocks
         PedidoDTO pedidoDTO = new PedidoDTO();
         Pedido pedido = new Pedido();
@@ -77,7 +77,7 @@ public class PedidoServiceTest {
     }
 
     @Test
-    public void testListarPedidos() {
+     void testListarPedidos() {
         // Mocks
         List<Pedido> listaPedidos = new ArrayList<>();
         when(pedidoRepository.findAll()).thenReturn(listaPedidos);
@@ -93,7 +93,7 @@ public class PedidoServiceTest {
     }
 
     @Test
-    public void testBuscarPedidoPorId() {
+     void testBuscarPedidoPorId() {
         // Mocks
         Long id = 1L;
         Pedido pedido = new Pedido();
@@ -110,7 +110,7 @@ public class PedidoServiceTest {
     }
 
     @Test
-    public void testBuscarPedidoPorIdNaoEncontrado() {
+     void testBuscarPedidoPorIdNaoEncontrado() {
         // Mocks
         Long id = 1L;
         when(pedidoRepository.findById(id)).thenReturn(Optional.empty());
@@ -123,7 +123,7 @@ public class PedidoServiceTest {
 
 
     @Test
-    public void testAtualizarPedidoNaoEncontrado() {
+     void testAtualizarPedidoNaoEncontrado() {
         // Mocks
         Long id = 1L;
         PedidoDTO pedidoDTO = new PedidoDTO();
@@ -138,7 +138,7 @@ public class PedidoServiceTest {
     }
 
     @Test
-    public void testDeletarPedido() {
+     void testDeletarPedido() {
         // Mocks
         Long id = 1L;
         Pedido pedido = new Pedido();

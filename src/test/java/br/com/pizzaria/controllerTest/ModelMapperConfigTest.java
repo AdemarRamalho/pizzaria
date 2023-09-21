@@ -7,10 +7,10 @@ import org.modelmapper.ModelMapper;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class ModelMapperConfigTest {
+ class ModelMapperConfigTest {
 
     @Test
-    public void testModelMapperBeanCreation() {
+  void testModelMapperBeanCreation() {
 
         ModelMapperConfig modelMapperConfig = new ModelMapperConfig();
 

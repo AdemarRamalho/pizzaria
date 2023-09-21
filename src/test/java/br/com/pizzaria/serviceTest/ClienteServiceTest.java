@@ -32,13 +32,13 @@ public class ClienteServiceTest {
 
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
         MockitoAnnotations.openMocks(this);
     }
 
 
     @Test
-    public void testCriarCliente() {
+   void testCriarCliente() {
         // Configurar dados de entrada
         ClienteDTO clienteDTO = new ClienteDTO();
         clienteDTO.setNome("João");
@@ -71,7 +71,7 @@ public class ClienteServiceTest {
 
 
     @Test
-    public void testListarClientes() {
+    void testListarClientes() {
         List<Cliente> clientes = new ArrayList<>();
         clientes.add(new Cliente());
         clientes.add(new Cliente());
@@ -84,7 +84,7 @@ public class ClienteServiceTest {
     }
 
     @Test
-    public void testBuscarClientePorId() {
+     void testBuscarClientePorId() {
         Long id = 1L;
         Cliente cliente = new Cliente();
         cliente.setId(id);
@@ -100,7 +100,7 @@ public class ClienteServiceTest {
     }
 
     @Test
-    public void testBuscarClientePorId_NaoEncontrado() {
+     void testBuscarClientePorId_NaoEncontrado() {
         Long id = 1L;
 
         when(clienteRepository.findById(id)).thenReturn(Optional.empty());
@@ -110,7 +110,7 @@ public class ClienteServiceTest {
     }
 
     @Test
-    public void testAtualizarCliente_NaoEncontrado() {
+     void testAtualizarCliente_NaoEncontrado() {
         Long id = 1L;
         ClienteDTO clienteDTO = new ClienteDTO();
         clienteDTO.setNome("Maria");
@@ -123,7 +123,7 @@ public class ClienteServiceTest {
     }
 
     @Test
-    public void testDeletarCliente() {
+     void testDeletarCliente() {
         Long id = 1L;
         Cliente clienteExistente = new Cliente();
         clienteExistente.setId(id);
@@ -136,7 +136,7 @@ public class ClienteServiceTest {
     }
 
     @Test
-    public void testDeletarCliente_NaoEncontrado() {
+     void testDeletarCliente_NaoEncontrado() {
         Long id = 1L;
 
         when(clienteRepository.findById(id)).thenReturn(Optional.empty());

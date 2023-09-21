@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class EnderecoServiceTest {
+ public class EnderecoServiceTest {
 
     @Mock
     private EnderecoRepository enderecoRepository;
@@ -31,12 +31,12 @@ public class EnderecoServiceTest {
     private EnderecoService enderecoService;
 
     @BeforeEach
-    public void setUp() {
+     void setUp() {
         MockitoAnnotations.openMocks(this);
     }
 
     @Test
-    public void testCriarEndereco() {
+     void testCriarEndereco() {
         EnderecoDTO enderecoDTO = new EnderecoDTO();
         Endereco endereco = new Endereco();
 
@@ -53,7 +53,7 @@ public class EnderecoServiceTest {
     }
 
     @Test
-    public void testListarEnderecos() {
+     void testListarEnderecos() {
         List<Endereco> listaEnderecos = new ArrayList<>();
         when(enderecoRepository.findAll()).thenReturn(listaEnderecos);
 
@@ -66,7 +66,7 @@ public class EnderecoServiceTest {
     }
 
     @Test
-    public void testBuscarEnderecoPorId() {
+     void testBuscarEnderecoPorId() {
         Long id = 1L;
         Endereco endereco = new Endereco();
         when(enderecoRepository.findById(id)).thenReturn(Optional.of(endereco));
@@ -80,7 +80,7 @@ public class EnderecoServiceTest {
     }
 
     @Test
-    public void testBuscarEnderecoPorIdNaoEncontrado() {
+     void testBuscarEnderecoPorIdNaoEncontrado() {
         Long id = 1L;
         when(enderecoRepository.findById(id)).thenReturn(Optional.empty());
 
@@ -89,7 +89,7 @@ public class EnderecoServiceTest {
         verify(enderecoRepository, times(1)).findById(id);
     }
     @Test
-    public void testAtualizarEndereco() {
+     void testAtualizarEndereco() {
         Long id = 1L;
         EnderecoDTO enderecoDTO = new EnderecoDTO();
         enderecoDTO.setNomeRua("Rua Teste");

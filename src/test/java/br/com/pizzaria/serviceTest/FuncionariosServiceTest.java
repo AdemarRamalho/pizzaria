@@ -18,7 +18,7 @@ import org.modelmapper.ModelMapper;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-public class FuncionariosServiceTest {
+ public class FuncionariosServiceTest {
 
     @Mock
     private FuncionarioRepository funcionarioRepository;
@@ -30,12 +30,12 @@ public class FuncionariosServiceTest {
     private FuncionarioService funcionarioService;
 
     @BeforeEach
-    public void setUp() {
+     void setUp() {
         MockitoAnnotations.openMocks(this);
     }
 
     @Test
-    public void testCriarFuncionario() {
+     void testCriarFuncionario() {
 
         FuncionarioDTO funcionarioDTO = new FuncionarioDTO();
         Funcionario funcionario = new Funcionario();
@@ -55,7 +55,7 @@ public class FuncionariosServiceTest {
     }
 
     @Test
-    public void testListarFuncionarios() {
+     void testListarFuncionarios() {
 
         List<Funcionario> listaFuncionarios = new ArrayList<>();
         when(funcionarioRepository.findAll()).thenReturn(listaFuncionarios);
@@ -71,7 +71,7 @@ public class FuncionariosServiceTest {
     }
 
     @Test
-    public void testBuscarFuncionarioPorId() {
+     void testBuscarFuncionarioPorId() {
 
         Long id = 1L;
         Funcionario funcionario = new Funcionario();
@@ -87,7 +87,7 @@ public class FuncionariosServiceTest {
     }
 
     @Test
-    public void testBuscarFuncionarioPorIdNaoEncontrado() {
+     void testBuscarFuncionarioPorIdNaoEncontrado() {
 
         Long id = 1L;
         when(funcionarioRepository.findById(id)).thenReturn(Optional.empty());
@@ -100,7 +100,7 @@ public class FuncionariosServiceTest {
 
 
     @Test
-    public void testAtualizarFuncionarioNaoEncontrado() {
+     void testAtualizarFuncionarioNaoEncontrado() {
 
         Long id = 1L;
         FuncionarioDTO funcionarioDTO = new FuncionarioDTO();
@@ -114,7 +114,7 @@ public class FuncionariosServiceTest {
     }
 
     @Test
-    public void testDeletarFuncionario() {
+     void testDeletarFuncionario() {
 
         Long id = 1L;
         Funcionario funcionario = new Funcionario();
@@ -128,7 +128,7 @@ public class FuncionariosServiceTest {
     }
 
     @Test
-    public void testDeletarFuncionarioNaoEncontrado() {
+     void testDeletarFuncionarioNaoEncontrado() {
 
         Long id = 1L;
 
@@ -141,7 +141,7 @@ public class FuncionariosServiceTest {
     }
 
     @Test
-    public void testConstrutorFuncionarioService() {
+     void testConstrutorFuncionarioService() {
         assertNotNull(funcionarioService);
         assertNotNull(funcionarioRepository);
 

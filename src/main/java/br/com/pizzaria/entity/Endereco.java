@@ -17,7 +17,8 @@ public class Endereco {
     private String nomeRua;
     private int numeroCasa;
 
-    @OneToOne(mappedBy = "endereco")
+    @ManyToOne
+    @JoinColumn(name = "cliente_id")
     private Cliente cliente;
 
 }
